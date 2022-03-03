@@ -7,7 +7,9 @@ foreach (System.Reflection.TypeInfo ti in assm.DefinedTypes)
 {
   if (ti.ImplementedInterfaces.Contains(typeof(ISolution)))
   {
-    classes.Add(ti.FullName, assm.CreateInstance(ti.FullName) as ISolution);
+    classes.Add(
+      ti.FullName,
+      assm.CreateInstance(ti.FullName) as ISolution);
   }
 }
 

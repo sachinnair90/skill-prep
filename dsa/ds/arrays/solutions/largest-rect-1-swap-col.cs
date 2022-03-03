@@ -39,7 +39,7 @@ Constraints:
 0 <= mat[i][j] <= 1
 
 - PROBLEM STATEMENT - */
-namespace dsa.ds.arrays
+namespace dsa.ds.arrays.solutions
 {
   public class LargestRect1SwapCol : ISolution
   {
@@ -63,6 +63,7 @@ namespace dsa.ds.arrays
       var input = example2;
       var numberOfColumns = input[0].Count;
       var numberOfRows = input.Count;
+      var area = 0;
 
       // APPROACH 1
       var indicesOfFilledColumns = new List<int>();
@@ -89,7 +90,8 @@ namespace dsa.ds.arrays
         }
       }
 
-      Console.WriteLine($"Area: { indicesOfFilledColumns.Count * numberOfRows }");
+      area = indicesOfFilledColumns.Count * numberOfRows;
+
 
       // APPROACH 2
 
@@ -98,6 +100,28 @@ namespace dsa.ds.arrays
       //                          BOTTOM-RIGHT: 0 <= i < no.of.columns
 
       // STEP 2: For-each point (x,y) check if the point falls under a pair of (TL,BR)
+
+      // APPROACH 3
+
+      // STEP 1: Find max continuous sum for each column
+      // STEP 2: Store sum against each column key in dictionary with row numbers for each sum
+      // STEP 3: Starting from lowest sum for each column check other column's row entries to see if the row entries match
+      // STEP 4: Calculate and store area of each iteration and do max() of all areas found
+
+      var sums = new Dictionary<int, Tuple<int, List<int>>>();
+      var sum = 0;
+      var
+      for (int i = 0; i < numberOfColumns; i++)
+      {
+
+        for (int j = 0; j < numberOfRows; j++)
+        {
+
+        }
+      }
+
+      Console.WriteLine($"Area: { area }");
+
     }
   }
 }
