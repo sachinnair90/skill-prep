@@ -110,7 +110,7 @@ namespace dsa.ds.arrays.solutions
 
       var sums = new Dictionary<int, Tuple<int, List<int>>>();
       var sum = 0;
-      var
+      //var
       for (int i = 0; i < numberOfColumns; i++)
       {
 
